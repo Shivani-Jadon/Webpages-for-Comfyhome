@@ -1,0 +1,232 @@
+/*body*/
+body{
+	margin: 0px;
+}
+
+/*navigation and heading container*/
+#heading{
+    background-image: linear-gradient(to top left, navy, #3F51B5);
+    align-items: center;
+	border-radius: 0% 0% 30% 30%;
+	padding-bottom: 2%;
+	position: relative;
+	box-shadow: 0px 0px 20px black;
+}
+
+#heading nav{
+	text-align: center;
+	padding: 2%;
+}
+
+/*styling for all unordered list*/
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+.inline-list li{
+	display: inline-block;
+	text-align: center;
+	margin: 0px;
+	padding: 2%;
+}
+
+/* navigation bar */
+nav .inline-list li a{
+	text-decoration: none;
+	color: #64b5f6;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+nav .inline-list li a:hover{
+	color: #d6dfe6;
+	transition: 1s;
+}
+
+#heading h1{
+	font-family: sans-serif;
+    font-weight: bold;
+    color: #d6dfe6;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 0px;
+	text-align: center;
+	padding-bottom: 2%;
+}
+
+/* /*iot remote */
+#iot-lock #remote{
+	display: flex;
+	justify-content: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -10%;
+	background-image: repeating-linear-gradient(#d6dfe6, white);
+}
+
+#iot-lock #remote form{
+	height: inherit;
+	padding: 15% 0% 7% 0%;
+}
+
+/* iot lock container */
+#iot-lock #remote form #image_container{
+	background-image: url(../image/smart_home.jpg);
+	background-position: center;
+	background-size: cover;
+	/* height: 20vh; */
+/*	max-width: 500px;*/
+	margin: 3%;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px black;
+	opacity: 0.8;
+	transform-style: preserve-3d;
+	perspective: 1000;
+}
+
+#image_container #lock{
+	margin: 10%;
+}
+
+#image_container #lock a{
+	/* font-size: 30px; */
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+#image_container #lock a h2:hover{
+	transform: scale(1.2);
+	color: navy;
+	transition: all 0.5s ease-in-out;
+}
+
+
+form div{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#iot-lock #remote form .buttons{
+	margin: 0rem 1rem 0.4rem 1rem;
+}
+
+.subheading{
+	/*text-align: center;*/
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+}
+
+.ip {
+	height: 2rem;
+	width: 11rem;
+    color: rgba(46, 92, 122, 1);
+    background-color: #c1c1c1;
+    text-align: center;
+    font-family: serif;
+    box-shadow: 0px 0px 10px black;
+}
+
+.click {
+    display: inline-block;
+    padding: 0.2rem 0.2rem;
+    font-family: serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 2rem;
+    width: 6em;
+    text-align: center;
+    color: rgba(240, 238, 234, 1);
+    background-color: #3F51B5;
+	box-shadow: 0px 0px 10px black;
+   /* margin-left: 22%;	*/
+}
+
+.click:hover{
+	color: #d6dfe6;
+	background-color: navy;
+}
+
+/*contact section*/
+#contact{
+	color: #d6dfe6;
+	padding: 2%;
+	background-image: linear-gradient(navy, #3F51B5);
+}
+
+#contact-head{
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	padding: 2%;
+}
+
+#contact #details{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*styling form elements*/
+
+#contact #details form *{
+	margin: 3%;
+}
+
+#contact #details form label{
+	font-size: 1em;
+	font-weight: bold;
+	color: #d6dfe6;
+}
+
+#contact form textarea{
+	background-color: #d6dfe6;
+	color: navy;
+}
+
+#contact #details form button{
+	color: #d6dfe6;
+	background-color: transparent;
+	display: block;
+	margin-top: 0px;
+}
+
+#contact #details form button:hover{
+	background-color: navy;
+}
+
+/*contact-info styling*/
+#contact #details div .info{
+	margin: 2%;
+	width: 100%;
+	color: #d6dfe6;
+}
+
+/*social icons*/
+.social{
+	text-align: center;
+	margin: 3%;
+}
+
+#contact-info .social .inline-list li{	
+	margin-left: 1%;
+	padding: 5%;
+	border-radius: 50%;
+}
+
+#contact-info .social .inline-list li i{
+	color: #d6dfe6;	
+}
+
+#contact-info .social .inline-list li:hover{
+	box-shadow: 0px 0px 4px grey;
+	transition: 1s;
+}
