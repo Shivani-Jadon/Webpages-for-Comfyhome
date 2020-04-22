@@ -51,8 +51,8 @@ function take_snapshot() {
 }
 
 //clearing image
-function clear(){
-	document.getElementById("results").innerHTML = "";
+function clearImg(){
+	
 	document.getElementById("results").style.display = "none";
 	document.getElementById("image").style.display = "flex";
 	
