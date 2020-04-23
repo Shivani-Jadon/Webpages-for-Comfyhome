@@ -1,0 +1,210 @@
+.navbar{
+    padding: 2rem;
+}
+
+nav #login-btn{
+    padding : 2px 10px;
+}
+
+
+.section-heading{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    color: #607D8B
+}
+
+/* about section */
+.card-title{
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px black;
+    font-size: 2.3rem;
+}
+
+#card-image{
+    max-height: 60vh;
+    max-width: 80vw;
+    margin: auto;
+}
+
+#card-image img{
+    max-height: inherit;
+}
+
+#card-content .card-text{
+    padding: 2%;
+    text-align: justify;
+    border: 2px solid #9E9E9E;
+    color: #9E9E9E;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 20px;
+}
+
+/* steps */
+.icon{
+    font-size: 3rem;
+    color: black;
+}
+
+.carousel-item{
+    max-height: 60vh;
+}
+
+.carousel-item img{
+    max-height: inherit;
+}
+
+.carousel-caption{
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px black;
+}
+
+.carousel-caption h3,h4{
+    font-size: 20px;
+    color: whitesmoke;
+    text-shadow: 0px 0px 2px black;
+}
+
+/*feature section*/
+
+#my-features #feature-set{
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    justify-content: center; 
+    margin-bottom: 4%;
+}
+
+#feature-set .feature-box{
+    height: 7rem;
+    width: 10rem;
+    margin: 2rem;
+    background-color: grey;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px;
+}
+
+.feature{
+    height: inherit;
+    width: inherit;
+    border-radius : 20px;
+    box-shadow: 0px 0px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-box span{   
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+
+/*contact section*/
+#contact {
+    background-image: linear-gradient(-30deg,#616c7f,#292533);
+    color: white;
+}
+
+#contact #feedback{
+    display: flex;
+    margin: auto;
+}
+
+#contact #feedback form{
+    width: 50%;
+    padding: 1rem;
+}
+
+#contact #feedback form .fields{
+    width: 80%;
+    margin: 0.4rem;
+    border-width: 0px;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+}
+
+#contact #feedback form #btn{
+    display: flex;
+    justify-content: center;
+    margin-left: -10%;
+}
+
+#contact #feedback form button{
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    /*align-self: center;*/
+}
+
+#contact #feedback form button:hover{
+    background-color: black;
+}
+
+#contact #feedback #contact-details{
+    width: 50%;
+    margin-top: 2rem;
+}
+
+#contact #feedback #contact-details h6{
+    margin: 0px;
+}
+
+#contact #feedback #contact-details p{
+     font-size: 1rem;
+}
+
+
+@media screen and (max-width: 572px){
+    
+    #contact #feedback{
+        display: block;
+    }
+
+
+    #contact #feedback form{
+        width: 80%;
+        padding: 2rem;
+    }
+
+    #contact #feedback #contact-details{
+        width: 80%;
+        margin-left: 2rem;
+    }
+
+}
+
+/*social icons*/
+.social{
+	text-align: center;
+	margin: 3%;
+}
+
+.social .inline-list{
+    list-style: none;
+    display: flex;
+}
+
+.social .inline-list li{	
+	margin-left: 1%;
+	padding: 5%;
+	border-radius: 50%;
+}
+
+.social .inline-list li i{
+	color: #d6dfe6;	
+}
+
+.social .inline-list li:hover{
+	box-shadow: 0px 0px 4px grey;
+	transition: 1s;
+}
