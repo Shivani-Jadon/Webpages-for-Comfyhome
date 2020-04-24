@@ -28,7 +28,7 @@ function redirect(){
     var target = document.getElementById("iot_form");
     if(validate())
     {
-        target.action = "html/IOT_Lock.html";
+        target.action = "html/camera.html";
         target.submit();
     }
 }

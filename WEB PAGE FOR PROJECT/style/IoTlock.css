@@ -1,6 +1,7 @@
 /*body*/
 body{
 	margin: 0px;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 /*navigation and heading container*/
@@ -8,14 +9,14 @@ body{
     background-image: linear-gradient(-30deg, navy, #111113);
     align-items: center;
 	border-radius: 0% 0% 30% 30%;
-	padding-bottom: 2%;
+	padding-bottom: 10px;
 	position: relative;
 	box-shadow: 0px 0px 20px black;
 }
 
 #heading nav{
 	text-align: center;
-	padding: 2%;
+	padding: 10px;
 }
 
 /*styling for all unordered list*/
@@ -28,13 +29,13 @@ ul{
 	display: inline-block;
 	text-align: center;
 	margin: 0px;
-	padding: 2%;
+	padding: 10px;
 }
 
 /* navigation bar */
 nav .inline-list li a{
 	text-decoration: none;
-	color: #64b5f6;
+	color: #9E9E9E;
 	font-family: sans-serif;
 	font-weight: bold;
 }
@@ -130,8 +131,6 @@ nav #bar{
 	background-image: url(../image/smart_home.jpg);
 	background-position: center;
 	background-size: cover;
-	/* height: 20vh; */
-/*	max-width: 500px;*/
 	margin: 3%;
 	border-radius: 20px;
 	box-shadow: 0px 0px 20px black;
@@ -176,12 +175,15 @@ form div{
 	font-family: sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
-	
+	text-shadow: 0px 0px 2px black;
+	letter-spacing: 1px;
+	word-spacing: 5px;
 }
 
 .ip {
-	height: 2rem;
-	width: 11rem;
+	border: 2px gray solid;
+    height: 2rem;
+    width: 11rem;
     color: rgba(46, 92, 122, 1);
     background-color: #c1c1c1;
     text-align: center;
@@ -190,23 +192,24 @@ form div{
 }
 
 .click {
+    border: 2px solid white;
+    border-radius: 10px;
     display: inline-block;
     padding: 0.2rem 0.2rem;
     font-family: serif;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     height: 2rem;
     width: 6em;
     text-align: center;
     color: rgba(240, 238, 234, 1);
-    background-color: #3F51B5;
-	box-shadow: 0px 0px 10px black;
-   /* margin-left: 22%;	*/
+    background-color: #263238;
+    box-shadow: 0px 0px 10px black;
 }
 
 .click:hover{
 	color: #d6dfe6;
-	background-color: navy;
+	background-color: #110d63;
 }
 
 /*contact section*/
@@ -237,7 +240,7 @@ form div{
 }
 
 #contact #details form label{
-	font-size: 1em;
+	font-size: 1.2em;
 	font-weight: bold;
 	color: #d6dfe6;
 }
@@ -245,6 +248,9 @@ form div{
 #contact form textarea{
 	background-color: #d6dfe6;
 	color: navy;
+	border-radius: 5px;
+	width: 80%;
+	height: 10vh;
 }
 
 #contact #details form button{
@@ -252,10 +258,13 @@ form div{
 	background-color: transparent;
 	display: block;
 	margin-top: 0px;
+	padding: 4px;
+	border: 1.5px solid #d6dfe6;
+	border-radius: 5px;
 }
 
 #contact #details form button:hover{
-	background-color: navy;
+	background-color: black;
 }
 
 /*contact-info styling*/
