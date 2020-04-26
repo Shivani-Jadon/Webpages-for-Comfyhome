@@ -1,292 +1,311 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="shortcut icon" type="image/x-icon" href="https://5.imimg.com/data5/HR/OD/TW/ANDROID-18794965/product-jpeg-500x500.jpeg">
-        <title>Remotely Controlled Home</title>
-        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style/styleCover.css">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-    </head>
 
-    <body>
-        <!-- navigation menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar-brand"></a><i class="fas fa-home"></i> Comfy Home</div>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+<head>
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://5.imimg.com/data5/HR/OD/TW/ANDROID-18794965/product-jpeg-500x500.jpeg">
+  <title>Remotely Controlled Home</title>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style/styleCover.css">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+</head>
+
+<body>
+  <!-- navigation menu -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-brand"></a><i class="fas fa-home"></i> Comfy Home</div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" style="text-align: center; margin: auto;">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#steps">Guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#my-features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+    </div>
+
+    <!-- login form -->
+    <!-- Button trigger modal -->
+    <button type="button" id="login-btn" class="btn btn-outline-success" data-toggle="modal"
+      data-target="#staticBackdrop">
+      Login
+    </button>
+
+    <!-- Modal for login form-->
+    <!-- Button trigger modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Enter login details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
             </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto" style="text-align: center; margin: auto;">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-           
-                <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#steps">Guide</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#my-features">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </div>
-
-            <!-- login form -->
-              <!-- Button trigger modal -->
-              <button type="button" id="login-btn" class="btn btn-outline-success" data-toggle="modal" data-target="#staticBackdrop">
-                Login 
-              </button>
-
-              <!-- Modal for login form-->
-              <!-- Button trigger modal -->
-
-              <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Enter login details</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="iot_form"  method="post">
-                        <div class="form-group row">
-                          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                          <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail3" required>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                          <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPassword3" required>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="col-sm-10">
-                            <button type="button" class="btn btn-success" id="log_btn">Login</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+          </div>
+          <div class="modal-body">
+            <form id="iot_form" method="post">
+              <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" required>
                 </div>
               </div>
-          
-          </nav>
-
-          
-          
-          <!-- about section -->
-          <section id="about">
-            <div class="card mb-3">
-            
-              <div class="card-body">
-                <h1 class="card-title section-heading">Remotely Controlled Home</h1>
-                <div id="card-content">
-                  <div id="card-image"><img src="image/smart_home.jpg" class="card-img-top" alt="..."></div>
-                  <p class="card-text">The objective of “Remotely Controlled Home” is to establish a collaboration between home and technology to make daily chaos simpler and easier. Through this project we want to design a home automation system using, Internet of Things and Possibly Machine Learning with an added facility of mobile or web application. Remotely Controlled Home is a model implementation of home automation system with advanced features and technologies. Home automation is building automation for a home, called a smart home or smart house. A home automation system will control lighting, climate, entertainment systems, and appliances. It may also include home security such as access control and alarm systems. </p>
-                </div>
-  
-                <p class="card-text"><small class="text-muted" >developed by students</small></p>
-              </div>
-            </div>
-          </section>
-          
-
-          <!-- steps -->
-          <section id="steps">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="image/cover_image1.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>Step 1</h3>
-                    <h4>Login to enter the system</h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="image/cover_image2.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">     
-                    <h3>Step 2</h3>
-                    <h4>Connect with the Platform and Server</h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="image/cover_image3.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>Step 3</h3>
-                    <h4>Authentication of User before allowing access</h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="image/cover_image4.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>Step 4</h3>
-                    <h4>Unlock your door automatically</h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="image/cover_image5.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3>Step 5</h3>
-                    <h4>Control your home appliances and devices</h4>
-                  </div>
+              <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" required>
                 </div>
               </div>
-  
-              <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                <span class="icon" aria-hidden="true"><i class="fas fa-caret-square-left"></i></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                <span class="icon" aria-hidden="true"><i class="fas fa-caret-square-right"></i> </span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-  
-          </section>
-          
-          <!-- feature section -->
-          <section id="my-features">
-            <h3 class="section-heading">
-                <i class="fas fa-briefcase"></i>
-                <span>Features</span>
-            </h3>
-			      <div id="feature-set">
-                <div class="feature-box">
-                    <div class="feature" data-feature="1" fill="false" style="background-color: rgba(230,48,120,0.8)">
-                        <Span>Cost Effective</Span>
-                    </div>                
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <button type="button" class="btn btn-success" id="log_btn">Login</button>
                 </div>
-                
-                <div class="feature-box">
-                    <div class="feature" data-feature="2" fill="false" style="background-color: rgba(89, 220, 209, 0.8)">
-                        <Span>User-friendly</Span>
-                    </div>                
-                </div>
-                
-                <div class="feature-box">
-                    <div class="feature" data-feature="3" fill="false" style="background-color: rgba(189, 168, 209, 0.8)">
-                        <Span>Customisable</Span>
-                    </div>                
-                </div>
-                
-                <div class="feature-box">
-                    <div class="feature" data-feature="4" fill="false" style="background-color: rgba(177, 105, 105, 0.8)">
-                        <Span>Secured</Span>
-                    </div>                
-                </div>
-                
-                <div class="feature-box">
-                    <div class="feature" data-feature="5" fill="false" style="background-color: rgba(250, 221, 60, 0.822)">
-                        <Span>Multi-functional</Span>
-                    </div>                
-                </div>
-
-                <div class="feature-box">
-                    <div class="feature" data-feature="6" fill="false" style="background-color: rgba(134, 190, 29, 0.8)">
-                        <Span>AI Supportive</Span>
-                    </div>                
-                </div>
-                
-                <div class="feature-box">
-                    <div class="feature" data-feature="7" fill="false" style="background-color: rgba(3, 169, 244, 0.78)">
-                        <Span>Smart & Handy</Span>
-                    </div>                
-                </div>
-            </div>
-        </section>
-
-          <!-- contact section -->
-          <section id="contact">
-            <h4 class="section-heading">
-                <i class="fas fa-id-card"></i>
-                Contact
-            </h4>
-        
-        <div id="feedback">
-            <form action="">
-                <div>
-                    <input class="fields" type="text" name="Name" placeholder="Your Name" required>
-                </div>
-                <div>
-                    <input class="fields" type="e-mail" name="mail" placeholder="Your Email" required>
-                </div>
-                
-                <div>
-                   <textarea  class="fields" rows="1" placeholder="Message"></textarea> 
-                </div>
-                <div id="btn">
-                    <button type="submit">
-                        Send Feedback
-                    </button>
-                </div>
-                
+              </div>
             </form>
-            
-            <div id="contact-details">
-            <div>
-                <h6>
-                    Convert your home to <strong>Remotely Controlled Home</strong>
-                </h6>
-            </div>
-            <div>
-                <p>
-                    Contact us using the details given below or send your queries in our inbox
-                </p>
-            </div>
-            <div>
-                <h6>
-                    Office address
-                </h6>
-            </div>
-            <div>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i>
-                     Delhi, India
-                </p>
-            </div>
-            <div>
-             <p>
-                  <i class="fas fa-phone"></i>
-                 9205524292
-                </p>
-            </div>
-            <div>
-             <p>
-                    <i class="fas fa-envelope"></i>
-                comfyhome2020@gmail.com
-                </p>
-            </div>
-            <div class="social">
-              <ul class="inline-list">
-                <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
-                <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
-                <li> <a href="#"> <i class="fab fa-google-plus-g"></i> </a></li>
-                <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
-              </ul>
-            </div>
+          </div>
         </div>
-        
-        </div>
-        
-        
-        
-    </section>
+      </div>
+    </div>
 
-        
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="script/front_script.js"></script>
-      </body>
+  </nav>
+
+
+
+  <!-- about section -->
+  <section id="about">
+    <div class="card mb-3">
+
+      <div class="card-body">
+        <h1 class="card-title section-heading">Remotely Controlled Home</h1>
+        <div id="card-content">
+          <div id="card-image"><img src="image/smart_home.jpg" class="card-img-top" alt="..."></div>
+          <p class="card-text">The objective of “Remotely Controlled Home” is to establish a collaboration between home
+            and technology to make daily chaos simpler and easier. Through this project we want to design a home
+            automation system using, Internet of Things and Possibly Machine Learning with an added facility of mobile
+            or web application. Remotely Controlled Home is a model implementation of home automation system with
+            advanced features and technologies. Home automation is building automation for a home, called a smart home
+            or smart house. A home automation system will control lighting, climate, entertainment systems, and
+            appliances. It may also include home security such as access control and alarm systems. </p>
+        </div>
+
+        <p class="card-text"><small class="text-muted">developed by students</small></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- steps -->
+  <section id="steps">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="image/cover_image1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Step 1</h3>
+            <h4>Login to enter the system</h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="image/cover_image2.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Step 2</h3>
+            <h4>Connect with the Platform and Server</h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="image/cover_image3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Step 3</h3>
+            <h4>Authentication of User before allowing access</h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="image/cover_image4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Step 4</h3>
+            <h4>Unlock your door automatically</h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="image/cover_image5.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Step 5</h3>
+            <h4>Control your home appliances and devices</h4>
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="icon" aria-hidden="true"><i class="fas fa-caret-square-left"></i></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="icon" aria-hidden="true"><i class="fas fa-caret-square-right"></i> </span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- feature section -->
+  <section id="my-features">
+    <h3 class="section-heading">
+      <i class="fas fa-briefcase"></i>
+      <span>Features</span>
+    </h3>
+    <div id="feature-set">
+      <div class="feature-box">
+        <div class="feature" data-feature="1" fill="false" style="background-color: rgba(230,48,120,0.8)">
+          <Span>Cost Effective</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="2" fill="false" style="background-color: rgba(89, 220, 209, 0.8)">
+          <Span>User-friendly</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="3" fill="false" style="background-color: rgba(189, 168, 209, 0.8)">
+          <Span>Customisable</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="4" fill="false" style="background-color: rgba(177, 105, 105, 0.8)">
+          <Span>Secured</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="5" fill="false" style="background-color: rgba(250, 221, 60, 0.822)">
+          <Span>Multi-functional</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="6" fill="false" style="background-color: rgba(134, 190, 29, 0.8)">
+          <Span>AI Supportive</Span>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature" data-feature="7" fill="false" style="background-color: rgba(3, 169, 244, 0.78)">
+          <Span>Smart & Handy</Span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section id="contact">
+    <h4 class="section-heading">
+      <i class="fas fa-id-card"></i>
+      Contact
+    </h4>
+
+    <div id="feedback">
+      <form action="">
+        <div>
+          <input class="fields" type="text" name="Name" placeholder="Your Name" required>
+        </div>
+        <div>
+          <input class="fields" type="e-mail" name="mail" placeholder="Your Email" required>
+        </div>
+
+        <div>
+          <textarea class="fields" rows="1" placeholder="Message"></textarea>
+        </div>
+        <div id="btn">
+          <button type="submit">
+            Send Feedback
+          </button>
+        </div>
+
+      </form>
+
+      <div id="contact-details">
+        <div>
+          <h6>
+            Convert your home to <strong>Remotely Controlled Home</strong>
+          </h6>
+        </div>
+        <div>
+          <p>
+            Contact us using the details given below or send your queries in our inbox
+          </p>
+        </div>
+        <div>
+          <h6>
+            Office address
+          </h6>
+        </div>
+        <div>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Delhi, India
+          </p>
+        </div>
+        <div>
+          <p>
+            <i class="fas fa-phone"></i>
+            9205524292
+          </p>
+        </div>
+        <div>
+          <p>
+            <i class="fas fa-envelope"></i>
+            comfyhome2020@gmail.com
+          </p>
+        </div>
+        <div class="social">
+          <ul class="inline-list">
+            <li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+            <li> <a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
+            <li> <a href="#"> <i class="fab fa-google-plus-g"></i> </a></li>
+            <li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script/front_script.js"></script>
+</body>
+
 </html>

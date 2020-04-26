@@ -1,130 +1,145 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>IoT Control</title>
-			<link rel="stylesheet" type="text/css" href="../style/IoTlock.css">
-			<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-			<meta name="viewport" content="width=device-width initial-scale=1.0">
-		</head>
+<html>
 
-		<body>
-			<header id="heading">
-				<nav>
-					<ul  id="nav-items" class="inline-list">
-						<li> <a href="../index.html">Home</li></a>
-						<li> <a href="#remote">Controls</li></a>
-						<li> <a href="#contact"> Contact</li></a>
-					</ul>
+<head>
+	<title>IoT Control</title>
+	<link rel="stylesheet" type="text/css" href="../style/IoTlock.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+</head>
 
+<body>
+	<header id="heading">
+		<nav>
+			<ul id="nav-items" class="inline-list">
+				<li> <a href="../index.html">Home</li></a>
+				<li> <a href="#remote">Controls</li></a>
+				<li> <a href="#contact"> Contact</li></a>
+			</ul>
+
+			<div>
+
+				<div id="bar">
 					<div>
-						
-						<div id="bar" >
-							<div>
-								<i class="fas fa-bars"> </i>
-							
-								<div id="menu">
-									<ul id="droplist">
-										<li> <a href="../index.html">Home</li></a>
-										<li> <a href="#remote">Controls</li></a>
-										<li> <a href="#contact"> Contact</li></a>
-				
-									</ul>
-								</div>
+						<i class="fas fa-bars"> </i>
+
+						<div id="menu">
+							<ul id="droplist">
+								<li> <a href="../index.html">Home</li></a>
+								<li> <a href="#remote">Controls</li></a>
+								<li> <a href="#contact"> Contact</li></a>
+
+							</ul>
+						</div>
 					</div>
-				</nav>
-				
-				<h1><i class="fas fa-home"></i> Remotely Controlled Home</h1>
+		</nav>
 
-			</header>
-			
-			<main id="iot-lock">
-				<section id="remote">
-					<form action="" method="post">
-						<div id="image_container">
-							<div id="lock"><a href="../index.html">
-								<h2><i class="fas fa-unlock-alt"></i> Exit Gate</h2>
-								<p>Click to exit controls</p>
-							</a></div>
-						</div>
-						<div>
-							<h3 class="subheading">Server IP Address</Address></h3>
-						</div>
-						<div>	
-							<div class="buttons"><input class="ip" type="text" name="nodeMcuIp" placeholder="Enter NodeMCU IP Address"></div>
-							<div class="buttons"><input class="ip" type="text" name="pythonServerIp" placeholder="Enter Python Server IP Address"></div>
-						</div>
+		<h1><i class="fas fa-home"></i> Remotely Controlled Home</h1>
 
-						<div>
-							<h3 class="subheading">Door Lock Controller</h3>
-						</div>
-						<div>	
-							<div class="buttons"><a href="camera.html"><button class="click" type="button" name="unlock">unlock</button></div></a>
-							<div class="buttons"><button class="click" type="button" name="unlock">lock</button></div>
-						</div>
+	</header>
 
-						<div>
-							<h3 class="subheading">Water plants</h3>
-						</div>
-						<div>
-							<div class="buttons"><button class="click" onclick="myFunction('/fanon')" type="button" name="start">start</button></div>
-							<div class="buttons"><button class="click" onclick="myFunction('/fanoff')" type="button" name="stop">stop</button></div>
-						</div>
+	<main id="iot-lock">
+		<section id="remote">
+			<form action="" method="post">
+				<div id="image_container">
+					<div id="lock"><a href="../index.html">
+							<h2><i class="fas fa-unlock-alt"></i> Exit Gate</h2>
+							<p>Click to exit controls</p>
+						</a></div>
+				</div>
+				<div>
+					<h3 class="subheading">Server IP Address</Address>
+					</h3>
+				</div>
+				<div>
+					<div class="buttons"><input class="ip" type="text" name="nodeMcuIp"
+							placeholder="Enter NodeMCU IP Address"></div>
+					<div class="buttons"><input class="ip" type="text" name="pythonServerIp"
+							placeholder="Enter Python Server IP Address"></div>
+				</div>
 
-						<div>
-							<h3 class="subheading">LED Control</h3>
-						</div>
-						<div>
-							<div class="buttons"><button class="click" onclick="myFunction('/ledon')" type="button" name="on">on</button></div>
-							<div class="buttons"><button class="click" onclick="myFunction('/ledoff')" type="button" name="off">off</button></div>
-						</div>
+				<div>
+					<h3 class="subheading">Door Lock Controller</h3>
+				</div>
+				<div>
+					<div class="buttons"><a href="camera.html"><button class="click" type="button"
+								name="unlock">unlock</button></div></a>
+					<div class="buttons"><button class="click" type="button" name="unlock"
+							onclick="myFunction('/doorlock')">lock</button></div>
+				</div>
 
-						<div>
-							<h3 class="subheading">Tubelight Control</h3>
-						</div>
-						<div>
-							<div class="buttons"><button class="click" onclick="myFunction('/tubeon')" type="button" name="on">on</button></div>
-							<div class="buttons"><button class="click" onclick="myFunction('/tubeoff')" type="button" name="off">off</button></div>
-						</div>
+				<div>
+					<h3 class="subheading">Water plants</h3>
+				</div>
+				<div>
+					<div class="buttons"><button class="click" onclick="myFunction('/fanon')" type="button"
+							name="start">start</button></div>
+					<div class="buttons"><button class="click" onclick="myFunction('/fanoff')" type="button"
+							name="stop">stop</button></div>
+				</div>
 
-						<div>
-							<h3 class="subheading">Switch Control</h3>
-						</div>
-						<div>
-							<div class="buttons"><button class="click" onclick="myFunction('/switchon')" type="button" name="on">on</button></div>
-							<div class="buttons"><button class="click" onclick="myFunction('/switchoff')" type="button" name="off">off</button></div>
-						</div>
+				<div>
+					<h3 class="subheading">LED Control</h3>
+				</div>
+				<div>
+					<div class="buttons"><button class="click" onclick="myFunction('/ledon')" type="button"
+							name="on">on</button></div>
+					<div class="buttons"><button class="click" onclick="myFunction('/ledoff')" type="button"
+							name="off">off</button></div>
+				</div>
 
-					</form>
-				</section>
+				<div>
+					<h3 class="subheading">Tubelight Control</h3>
+				</div>
+				<div>
+					<div class="buttons"><button class="click" onclick="myFunction('/tubeon')" type="button"
+							name="on">on</button></div>
+					<div class="buttons"><button class="click" onclick="myFunction('/tubeoff')" type="button"
+							name="off">off</button></div>
+				</div>
 
-				<section id="contact">
-					<div id="contact-head">
-						Contact
+				<div>
+					<h3 class="subheading">Switch Control</h3>
+				</div>
+				<div>
+					<div class="buttons"><button class="click" onclick="myFunction('/switchon')" type="button"
+							name="on">on</button></div>
+					<div class="buttons"><button class="click" onclick="myFunction('/switchoff')" type="button"
+							name="off">off</button></div>
+				</div>
+
+			</form>
+		</section>
+
+		<section id="contact">
+			<div id="contact-head">
+				Contact
+			</div>
+			<div id="details">
+				<form action="">
+					<label>Report Issues</label>
+					<textarea name="issues" placeholder="Write your issue" columns="30"></textarea>
+					<button type="submit">Report</button>
+				</form>
+
+				<div id="contact-info">
+					<div class="info">email : comfyhome@gmail.com</div>
+					<div class="info">contact no. : 9999999999</div>
+					<div class="social">
+						<ul class="inline-list">
+							<li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
+							<li> <a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
+							<li> <a href="#"> <i class="fab fa-google-plus-g"></i> </a></li>
+							<li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
+						</ul>
 					</div>
-					<div id="details">
-							<form action="">
-								<label>Report Issues</label>
-								<textarea name="issues" placeholder="Write your issue" columns="30"></textarea>
-								<button type="submit">Report</button>
-							</form>
+				</div>
+			</div>
 
-							<div id="contact-info">
-								<div class="info">email : comfyhome@gmail.com</div>
-								<div class="info">contact no. : 9999999999</div>
-								<div class="social">
-									<ul class="inline-list">
-										<li> <a href="#"> <i class="fab fa-linkedin-in"></i> </a></li>
-										<li> <a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
-										<li> <a href="#"> <i class="fab fa-google-plus-g"></i> </a></li>
-										<li> <a href="#"> <i class="fab fa-twitter"></i> </a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						
-				</section>
-			</main>
+		</section>
+	</main>
 
-			<script type="text/javascript" src="../script/nodeMCU.js"></script>
-		</body>
-	</html>	
+	<script type="text/javascript" src="../script/nodeMCU.js"></script>
+</body>
+
+</html>

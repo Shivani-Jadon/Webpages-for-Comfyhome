@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>IoT Lock</title>
   <link rel="stylesheet" href="../style/camera.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-	<meta name="viewport" content="width=device-width initial-scale=1.0">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
 </head>
+
 <body>
   <h1><i class="fas fa-unlock-alt"></i> User Authentication</h1>
   <div id="camera">
 
     <div>
       <div id="ip_container">
-        <h3 class="subheading">Server IP Address</h3><br/>
-        <div class="buttons"><input class="ip" type="text" name="nodeMcuIp" placeholder="Enter NodeMCU IP Address"></div>
-        <div class="buttons"><input class="ip" type="text" name="pythonServerIp" placeholder="Enter Python Server IP Address"></div>
+        <h3 class="subheading">Server IP Address</h3><br />
+        <div class="buttons"><input class="ip" type="text" name="nodeMcuIp" placeholder="Enter NodeMCU IP Address">
+        </div>
+        <div class="buttons"><input class="ip" type="text" name="pythonServerIp"
+            placeholder="Enter Python Server IP Address"></div>
       </div>
     </div>
 
     <div id="lock_container">
-      <div id="lock"><a href="#web_cam">
-        <h2><i class="fas fa-unlock-alt"></i> Verification</h2>
-        <p>Click for User authentication</p>
-      </a></div>
+      <div id="lock" onclick="expand()"><a href="#web_cam">
+          <h2><i class="fas fa-unlock-alt"></i> Verification</h2>
+          <p>Click for User authentication</p>
+        </a></div>
     </div>
-    
+
 
     <section id="web_cam">
       <div id="camera_container">
@@ -33,38 +37,39 @@
           <i class="fas fa-camera"></i> &nbsp Click Camera to take photo
         </div>
         <div id="my_camera"></div>
-  
+
         <div class="btn">
           <input type=button value="Allow Access" onClick="configure()">
           <input type=button value="Take Snapshot" onClick="take_snapshot()">
         </div>
       </div>
-  
+
       <div id="image_container">
         <div id="image">
           <i class="fas fa-image"></i> &nbsp
           Saved Image
         </div>
-  
-        <div id="results" ></div>
-  
+
+        <div id="results"></div>
+
         <div class="btn">
           <input type=button value="Clear" onClick="clearImg()">
         </div>
       </div>
     </section>
 
-    <div id="lock_container">
+    <!-- <div id="lock_container">
       <div id="lock"><a href="../html/IOT_Lock.html">
         <h2><i class="fas fa-unlock-alt"></i> Remote control</h2>
         <p>Click to access appliances</p>
       </a></div>
-    </div>
-    
+    </div> -->
+
   </div>
-    
-    <script type="text/javascript" src="../script/webcam.min.js"></script>  
+
+  <script type="text/javascript" src="../script/webcam.min.js"></script>
   <script type="text/javascript" src="../script/camera.js"></script>
   <script type="text/javascript" src="../script/nodeMCU.js"></script>
 </body>
+
 </html>
